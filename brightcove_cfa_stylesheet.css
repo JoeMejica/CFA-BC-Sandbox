@@ -1,0 +1,69 @@
+.video-js .vjs-endscreen-overlay-content {
+    position: relative;
+    float: left;
+    width: 100px;
+}
+    
+.video-js .vjs-custom-overlay {
+  
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+    font-size: 2em;
+    top: 0;
+    right: 0;
+    padding: 1em 2em;
+    text-align: center;
+    background-color: RGB (79,44,29); /* Chick-fil-A Brown */
+    opacity: .85;
+}
+
+.video-js .vjs-restart-control, .video-js .vjs-trigger-social-control {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    float: right;
+}
+
+.video-js .vjs-restart-control:before {
+    font-size: 100px;
+    font-family: "bc-custom-end-icons";
+    padding: 0.2em;
+}
+
+.video-js .vjs-trigger-social-control:before {
+    display: none;
+}
+   
+img.atCFA {
+    max-height: 130%;
+    max-width: 130%;
+    height: auto;
+    width: auto;
+    padding-bottom: 30px;
+    float: left;
+    align-self: auto
+}
+    
+img.VCLogo {
+    max-height: 130%;
+    max-width: 130%;
+    height: auto;
+    width: auto;
+    padding-bottom: 39px;
+    float: left;
+    align-self: auto   
+}
+      
+img.FeedbackQuestionsIcon {
+    max-height: 130%;
+    max-width: 130%;
+    height: auto;
+    width: auto;
+    float: left;
+    align-self: auto
+}
+
+div.linkBox {
+ float: left; align-content: space-around; 
+}

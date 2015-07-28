@@ -1,0 +1,124 @@
+body {
+	background: rgba(0, 0, 0, 0.89);
+}
+
+.contact-form {
+	width: 400px;
+	margin: 30px auto 0px auto;
+	border: 1px solid #f8f8f8;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) inset;
+	padding: 20px;
+	box-sizing: border-box;
+	background: #FFFFFF;
+}
+
+.contact-form form {
+	margin: 0px;
+}
+
+.contact-form h1 {
+	text-align: center;
+	margin-top: 0px;
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-weight: 300;
+    color: #ffffff;
+}
+
+.contact-form h2 {
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-weight: 300;
+}
+
+.control-group {
+	margin-bottom: 10px;
+}
+
+.control-group label {
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-weight: 400;
+}
+
+.control-group input[type="text"] {
+	width: 100%;
+	height: 30px;
+	border: 1px solid #000000;
+	outline: none;
+	padding: 0px 0px 0px 40px;
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-size: 16px;
+}
+
+.control-group textarea {
+	width: 100%;
+	max-width: 100%;
+	min-height: 120px;
+	border: 1px solid #000000;
+	outline: none;
+	padding: 5px 5px 5px 40px;
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-size: 14px;
+}
+
+.control-group input[type="submit"] {
+	width: 100%;
+	margin: 0px;
+	padding: 10px 0px 10px 0px;
+	outline: none;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #ffffff;
+	background: #c60c30;
+	background: -moz-linear-gradient(top, #c60c30 0%, #c60c30 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8d837), color-stop(100%,#c60c30));
+	background: -webkit-linear-gradient(top, #c60c30 0%,#c60c30 100%);
+	background: -o-linear-gradient(top, #c60c30 0%,#c60c30 100%);
+	background: -ms-linear-gradient(top, #c60c30 0%,#c60c30 100%);
+	background: linear-gradient(to bottom, #c60c30 0%,#c60c30 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c60c30', endColorstr='#c60c30',GradientType=0 );
+}
+
+.control-group input[type="submit"]:hover {
+	cursor: pointer;
+	background: #c60c30;
+	background: -moz-linear-gradient(top, #c60c30 0%, #c60c30 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#99bd0d), color-stop(100%,#c60c30));
+	background: -webkit-linear-gradient(top, #c60c30 0%,#c60c30 100%);
+	background: -o-linear-gradient(top, #c60c30 0%,#c60c30 100%);
+	background: -ms-linear-gradient(top, #c60c30 0%,#c60c30 100%);
+	background: linear-gradient(to bottom, #c60c30 0%,#c60c30 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c60c30', endColorstr='#c60c30',GradientType=0 );
+}
+
+.no-margin {
+	margin: 0px; 
+}
+
+.contact-form label.error, div#errors {
+	border: 1px solid #F07F73 !important;
+	margin-bottom: 3px;
+	background: #F07F73;
+	padding-left: 5px;
+	color: #ffffff;
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;    
+}
+
+div#errors{
+    display:none;
+}
+
+.contact-form #msg_submitting{
+    display:none;
+}
+
+.contact-form #msg_submitted{
+    display:none;
+}
+
+/* Input icons */
+.control-group .fullname { background: url(images/user.png) no-repeat 4px center; }
+.control-group .email {	background: url(images/mail.png) no-repeat 4px center; }
+.control-group .phone {	background: url(images/phone.png) no-repeat 4px center; }
+.control-group .message { background: url(images/message.png) no-repeat 4px 4px; }

@@ -39,7 +39,11 @@ STEP 7) If satisfied with Endscreen, click "Publish"
 <!DOCTYPE html>
 <html>
 
-    
+<!-- 
+//////////////////////
+//Internal Stylesheet 
+//////////////////////
+-->      
 <style>
     
 .video-js .vjs-endscreen-overlay-content {
@@ -75,10 +79,17 @@ STEP 7) If satisfied with Endscreen, click "Publish"
     padding: 0.2em;
 }
 
+<!-- Hide Social Media Sharing --> 
 .video-js .vjs-trigger-social-control:before {
     display: none;
 }
-   
+
+<!-- DIV containing image links -->    
+div.linkBox {
+ float: left; align-content: space-around; 
+}
+    
+<!-- @Chick-fil-A Logo -->    
 img.atCFA {
     max-height: 130%;
     max-width: 130%;
@@ -88,7 +99,8 @@ img.atCFA {
     float: left;
     align-self: auto
 }
-    
+  
+<!-- Video Center Logo -->    
 img.VCLogo {
     max-height: 130%;
     max-width: 130%;
@@ -98,7 +110,8 @@ img.VCLogo {
     float: left;
     align-self: auto   
 }
-      
+    
+<!-- Feedback/Questions Icon -->     
 img.FeedbackQuestionsIcon {
     max-height: 130%;
     max-width: 130%;
@@ -108,40 +121,34 @@ img.FeedbackQuestionsIcon {
     align-self: auto
 }
 
-div.linkBox {
- float: left; align-content: space-around; 
-}
-    
+
 </style>
 
+    
 <!-- 
-
-REMOVE "LINKS" HEADER 
-<div class="linkLabel">
-    <header>Links</header>
-    </div>
+///////////////
+//Image Links 
+///////////////
 -->    
-    
 <div class="linkBox">
-    
-<div align="left">
-  
+
+<!-- @Chick-fil-A Logo -->
+<div align="left"> 
 <a href ="https://cfahome.com"><img class="atCFA" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/at_cfa_logo.png"/></a>
 </div>
-    <br>
+<br>
 
-    <div align="left">
-    <a href="https://www.cfahome.com/video/"><img class="VCLogo" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/video_center_logo.png"/></a>
-    </div>
-        <br>
-    <div align="left">
-    <a href="mailto:video@chick-fil-a.com?Subject=Video%20Center%20Feedback/Questions&Body=Name%3A%0A%0AVideo%20URL%20%28if%20applicable%29%3A%20%0A%0AComments%3A%20
+<!-- Video Center Logo -->
+<div align="left">
+<a href="https://www.cfahome.com/video/"><img class="VCLogo" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/video_center_logo.png"/></a>
+</div>
+<br>
+
+<!-- Feedback/Questions Icon -->    
+<div align="left">
+<a href="mailto:video@chick-fil-a.com?Subject=Video%20Center%20Feedback/Questions&Body=Name%3A%0A%0AVideo%20URL%20%28if%20applicable%29%3A%20%0A%0AComments%3A%20
 " target="_top"><img class="FeedbackQuestionsIcon" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/feedback_questions.png"/></a>
-    </div>
-
-    
-    
-    
-    
+</div>
+   
 </div>
 </html>

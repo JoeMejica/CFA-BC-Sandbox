@@ -74,7 +74,8 @@ CUSTOM BIG PLAY BUTTON
     position: absolute;
     
     /* Square Icon Used */
-    background-image: url("https://raw.githubusercontent.com/JoeMejica/CFA-BC/master/CFA-SQUARE-ICON.png");   
+    /*Original Image Background Removed in order to blend colors well */
+    background-image: url("https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/cfa_chicken_head.png");   
     background-repeat: no-repeat;
     opacity: .6;
     background-size: 75px;

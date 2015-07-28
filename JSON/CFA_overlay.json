@@ -13,8 +13,8 @@
 
 //plugin options (formatted as JSON)
 {
-"align": "bottom-right",
-"content": "<a href=https://www.cfahome.com><img class=cfaimage src=http://cs1.brightcodes.net/pdias/2015/cfa-overlay-edit.png width=100% height=100%></a>",
-"end": "",
-"start": "play"
+  "align": "bottom-right",
+  "content": "<a href=https://www.cfahome.com><img class=cfaimage src=https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/cfa_overlay.png width=100% height=100%></a>",
+  "end": "",
+  "start": "play"
 }

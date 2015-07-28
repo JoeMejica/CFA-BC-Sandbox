@@ -1,0 +1,147 @@
+<!--
+Brightcove Custom Endscreen HTML
+
+New Brightcove Player allows custom endscreens to be used via HTML file. Below contains a custom endscreen that features the following elements:
+
+--Large REPLAY button 
+--@Chick-fil-A, Video Center, Feedback/Questions Icon Links
+--Feedback/Questions is a Mailto link which will open email client to send feedback questions to video@chick-fil-a.com
+
+****Refer to "Brightcove Player Endscreen with Email Form.html" for a Feedback/Questions icon that utilizes a simple PHP form
+
+CSS Notes:
+
+--CSS styling edits image icon sizing and positioning, endscreen background, Replay Button positioning and sizing, DISABLING of Social Sharing Button (Brightcove Default shows Button)
+--Stylesheet must be within HTML file, external CSS files do not work properly within Brightcove
+
+HTML Notes:
+--Refer to "Plug-in Guide" documentation for more info regarding issues experienced during development and more
+
+Instructions:
+
+STEP 1) Copy entire HTML file
+
+STEP 2) Locate "Endscreen" section in the Players Module and click "Edit"
+
+STEP 3) Make sure "Custom" is selected in the Endscreen options
+
+STEP 4) Paste HTML file in the "Content" box 
+
+STEP 5) Click "Save"
+
+STEP 6) Preview Endscreen in the Preview Player in the Players Module
+
+STEP 7) If satisfied with Endscreen, click "Publish" 
+
+    ->  IF NOT, make edits to HTML file and repeat Steps 1-6 until endscreen is to liking
+
+-->
+<!DOCTYPE html>
+<html>
+
+    
+<style>
+    
+.video-js .vjs-endscreen-overlay-content {
+    position: relative;
+    float: left;
+    width: 100px;
+}
+    
+.video-js .vjs-custom-overlay {
+  
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+    font-size: 2em;
+    top: 0;
+    right: 0;
+    padding: 1em 2em;
+    text-align: center;
+    background-color: RGB (79,44,29); /* Chick-fil-A Brown */
+    opacity: .85;
+}
+
+.video-js .vjs-restart-control, .video-js .vjs-trigger-social-control {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    float: right;
+}
+
+.video-js .vjs-restart-control:before {
+    font-size: 100px;
+    font-family: "bc-custom-end-icons";
+    padding: 0.2em;
+}
+
+.video-js .vjs-trigger-social-control:before {
+    display: none;
+}
+   
+img.atCFA {
+    max-height: 130%;
+    max-width: 130%;
+    height: auto;
+    width: auto;
+    padding-bottom: 30px;
+    float: left;
+    align-self: auto
+}
+    
+img.VCLogo {
+    max-height: 130%;
+    max-width: 130%;
+    height: auto;
+    width: auto;
+    padding-bottom: 39px;
+    float: left;
+    align-self: auto   
+}
+      
+img.FeedbackQuestionsIcon {
+    max-height: 130%;
+    max-width: 130%;
+    height: auto;
+    width: auto;
+    float: left;
+    align-self: auto
+}
+
+div.linkBox {
+ float: left; align-content: space-around; 
+}
+    
+</style>
+
+<!-- 
+
+REMOVE "LINKS" HEADER 
+<div class="linkLabel">
+    <header>Links</header>
+    </div>
+-->    
+    
+<div class="linkBox">
+    
+<div align="left">
+  
+<a href ="https://cfahome.com"><img class="atCFA" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/at_cfa_logo.png"/></a>
+</div>
+    <br>
+
+    <div align="left">
+    <a href="https://www.cfahome.com/video/"><img class="VCLogo" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/video_center_logo.png"/></a>
+    </div>
+        <br>
+    <div align="left">
+    <a href="mailto:video@chick-fil-a.com?Subject=Video%20Center%20Feedback/Questions&Body=Name%3A%0A%0AVideo%20URL%20%28if%20applicable%29%3A%20%0A%0AComments%3A%20
+" target="_top"><img class="FeedbackQuestionsIcon" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/feedback_questions.png"/></a>
+    </div>
+
+    
+    
+    
+    
+</div>
+</html>

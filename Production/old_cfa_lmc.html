@@ -1,0 +1,96 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Video Player</title>
+</head>
+<body>
+
+<script src='/ptl/js/jquery.tools.min.js;pv295821a1f66e046e'></script>
+
+<h1 id="videoTitle"></h1>
+
+<div id="videoGoesHere"></div>
+<div id="description" style="width:640px;font-size:17px;"></div>
+
+<script type="text/javascript"> 
+
+	function getUrlVar(key){
+			var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search); 
+			return result && result[1] || ""; 
+		}
+		
+	function isSecure() {
+		return window.location.protocol == 'https:';
+	}
+	
+	var modVP;
+	
+	function myTemplateLoaded(experienceID) {
+		var player = brightcove.api.getExperience(experienceID);
+		modVP = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
+	}
+	
+	function myTemplateReady(evt)
+	{
+		modVP.getCurrentVideo(function(videoDTO){
+			var title = videoDTO.displayName;
+			jQuery("#videoTitle").html(title);
+			document.title = title;
+			var desc = videoDTO.shortDescription;
+			jQuery("#description").html(desc);
+		});
+	}
+
+	jQuery(document).ready(function()
+	{
+		var param = getUrlVar('video');
+		if (param == null || param == "")
+		{
+			param = getUrlVar("bctid");
+		}
+		if (param == null || param == "")
+		{
+			jQuery("#videoGoesHere").html("No valid video specified.");
+			return;
+		}
+		
+		var bcObjectTag = '<object id="myExperience' + '" class="BrightcoveExperience">' +
+			'<param name="bgcolor" value="#FFFFFF" />' +
+			'<param name="width" value="640" />' +
+			'<param name="height" value="360" />' +
+			'<param name="playerID" value="1963901940001" />' +
+			'<param name="playerKey" value="AQ~~,AAABRVaDVfk~,5SyYQZYKDGXrTcOonhmNWrdxWjQchzK8" />' +
+			'<param name="isVid" value="true" />' +
+			'<param name="isUI" value="true" />' +
+			'<param name="dynamicStreaming" value="true" />' +
+			'<param name="includeAPI" value="true" />' +
+			'<param name="templateLoadHandler" value="myTemplateLoaded" />' +
+			'<param name="templateReadyHandler" value="myTemplateReady" />';
+		
+		bcObjectTag = bcObjectTag + '<param name="@videoPlayer" value="' + param + '" />'
+		if (isSecure())
+		{
+			bcObjectTag = bcObjectTag + '<param name=\"secureConnections\" value=\"true\" />';
+		}
+		bcObjectTag = bcObjectTag + '</object>';
+		
+		jQuery("#videoGoesHere").html(bcObjectTag);
+	
+		var scriptToLoad = '';
+		if (isSecure())
+		{
+			scriptToLoad = 'https://sadmin';
+		}
+		else
+		{
+			scriptToLoad = 'http://admin';
+		}
+		jQuery.getScript(scriptToLoad + '.brightcove.com/js/BrightcoveExperiences.js', function(){
+			brightcove.createExperiences();
+		});
+	});
+</script>
+
+</body>
+</html>

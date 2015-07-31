@@ -17,33 +17,12 @@ CSS Notes:
 HTML Notes:
 --Refer to "Plug-in Guide" documentation for more info regarding issues experienced during development and more
 
-Instructions:
-
-STEP 1) Copy entire HTML file
-
-STEP 2) Locate "Endscreen" section in the Players Module and click "Edit"
-
-STEP 3) Make sure "Custom" is selected in the Endscreen options
-
-STEP 4) Paste HTML file in the "Content" box 
-
-STEP 5) Click "Save"
-
-STEP 6) Preview Endscreen in the Preview Player in the Players Module
-
-STEP 7) If satisfied with Endscreen, click "Publish" 
-
-    ->  IF NOT, make edits to HTML file and repeat Steps 1-6 until endscreen is to liking
 
 -->
 <!DOCTYPE html>
 <html>
 
-<!-- 
-//////////////////////
-//Internal Stylesheet 
-//////////////////////
--->      
+    
 <style>
     
 .video-js .vjs-endscreen-overlay-content {
@@ -73,23 +52,20 @@ STEP 7) If satisfied with Endscreen, click "Publish"
     float: right;
 }
 
+.video-js. .vjs-trigger-social-control {
+    display: none;
+}
+    
 .video-js .vjs-restart-control:before {
     font-size: 100px;
     font-family: "bc-custom-end-icons";
     padding: 0.2em;
 }
 
-<!-- Hide Social Media Sharing --> 
 .video-js .vjs-trigger-social-control:before {
     display: none;
 }
-
-<!-- DIV containing image links -->    
-div.linkBox {
- float: left; align-content: space-around; 
-}
-    
-<!-- @Chick-fil-A Logo -->    
+   
 img.atCFA {
     max-height: 130%;
     max-width: 130%;
@@ -99,8 +75,7 @@ img.atCFA {
     float: left;
     align-self: auto
 }
-  
-<!-- Video Center Logo -->    
+    
 img.VCLogo {
     max-height: 130%;
     max-width: 130%;
@@ -110,8 +85,7 @@ img.VCLogo {
     float: left;
     align-self: auto   
 }
-    
-<!-- Feedback/Questions Icon -->     
+      
 img.FeedbackQuestionsIcon {
     max-height: 130%;
     max-width: 130%;
@@ -121,34 +95,34 @@ img.FeedbackQuestionsIcon {
     align-self: auto
 }
 
-
+div.linkBox {
+ float: left; align-content: space-around; 
+}
+    
 </style>
 
+   
     
-<!-- 
-///////////////
-//Image Links 
-///////////////
--->    
 <div class="linkBox">
-
-<!-- @Chick-fil-A Logo -->
-<div align="left"> 
+    
+<div align="left">
+  
 <a href ="https://cfahome.com"><img class="atCFA" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/at_cfa_logo.png"/></a>
 </div>
-<br>
+    <br>
 
-<!-- Video Center Logo -->
-<div align="left">
-<a href="https://www.cfahome.com/video/"><img class="VCLogo" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/video_center_logo.png"/></a>
-</div>
-<br>
-
-<!-- Feedback/Questions Icon -->    
-<div align="left">
-<a href="mailto:video@chick-fil-a.com?Subject=Video%20Center%20Feedback/Questions&Body=Name%3A%0A%0AVideo%20URL%20%28if%20applicable%29%3A%20%0A%0AComments%3A%20
+    <div align="left">
+    <a href="https://www.cfahome.com/video/"><img class="VCLogo" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/video_center_logo.png"/></a>
+    </div>
+        <br>
+    <div align="left">
+    <a href="mailto:video@chick-fil-a.com?Subject=Video%20Center%20Feedback/Questions&Body=Name%3A%0A%0AVideo%20URL%20%28if%20applicable%29%3A%20%0A%0AComments%3A%20
 " target="_top"><img class="FeedbackQuestionsIcon" src="https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/feedback_questions.png"/></a>
-</div>
-   
+    </div>
+
+    
+    
+    
+    
 </div>
 </html>

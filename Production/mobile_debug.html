@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE HTML>
 <html>
 <body>
@@ -11,3 +12,52 @@
 </body>
 
 </html>
+-->
+
+<!doctype html>
+<html>
+ 
+<head>
+  <meta charset="UTF-8">
+  <title>Solution 3</title>
+  <style type="text/css">
+    .video-js {
+      width: 480px;
+      height: 270px;
+    }
+  </style>
+</head>
+ 
+<body>
+  <video id="myPlayerID" 
+    data-account="1397315819001" 
+    data-player="b583a031-4d38-4f60-aca9-846182ff93b7" 
+    data-embed="default" 
+    data-video-id="4414608391001" 
+    class="video-js" controls></video>
+  <br />
+ 
+  <div id="textTarget"></div>
+ 
+  <script src="//players.brightcove.net/1397315819001/b583a031-4d38-4f60-aca9-846182ff93b7_default/index.min.js"></script>
+ 
+  <script type="text/javascript">
+    videojs("myPlayerID").ready(function () {
+      var myPlayer = this,
+        dynamicHTML;
+      myPlayer.catalog.getVideo('4414608391001', function (error, video) {
+        console.log("error", error)
+        myPlayer.catalog.load(video);
+        console.log("mediainfo after load: ", myPlayer.mediainfo);
+        dynamicHTML = "<p>Video Title: <strong>" + myPlayer.mediainfo.name + "</strong></p>";
+        dynamicHTML += "<p>Description: <strong>" + myPlayer.mediainfo.description + "</strong></p>";      
+        document.getElementById("textTarget").innerHTML = dynamicHTML;      
+        myPlayer.play();
+      })
+    });
+ 
+  </script>
+</body>
+ 
+</html>
+ 

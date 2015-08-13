@@ -29,7 +29,8 @@
   <script type="text/javascript">
     videojs("myPlayerID").ready(function () {
       var myPlayer = this,
-        dynamicHTML,
+        dynamicHTML;
+          
         videoIDfromURL = getQuerystring('video');
       myPlayer.catalog.getVideo(videoIDfromURL, function (error, video) {
         console.log("error", error)

@@ -62,7 +62,7 @@ CUSTOM BIG PLAY BUTTON
                 
 *Refer to "Editing and Creating CSS Files for Brightcove" documentation for more help
 */
-.bc-player-b583a031-4d38-4f60-aca9-846182ff93b7_default.vjs-mouse .vjs-paused .vjs-big-play-button {
+.bc-player-b583a031-4d38-4f60-aca9-846182ff93b7_default.vjs-mouse .vjs-big-play-button {
     background-color: RGB(198,12,48); /* Chick-fil-A Red */
     width: 110px !important;
     height: 70px !important;

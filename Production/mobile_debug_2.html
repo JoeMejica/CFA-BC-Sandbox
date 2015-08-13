@@ -20,7 +20,9 @@
     data-account="1397315819001"
     data-player="b583a031-4d38-4f60-aca9-846182ff93b7"
     data-embed="default"
-    class="video-js" controls></video>
+    class="video-js" controls
+    data-video-id=""></video>
+    
 
   <div id="videoDesc" style="width:640px;font-size:17px;"></div>
 
@@ -31,8 +33,15 @@
       var myPlayer = this,
         dynamicHTML;
           
-        videoIDfromURL = getQuerystring('video');
+        
+        
+        
+        
+        
+    videoIDfromURL = getQuerystring('video');
       myPlayer.catalog.getVideo(videoIDfromURL, function (error, video) {
+          
+          
         console.log("error", error)
         myPlayer.catalog.load(video);
         console.log("mediainfo after load: ", myPlayer.mediainfo);

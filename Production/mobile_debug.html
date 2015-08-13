@@ -34,9 +34,8 @@
     data-account="1397315819001" 
     data-player="b583a031-4d38-4f60-aca9-846182ff93b7" 
     data-embed="default" 
-     
+    data-video-id="4414608391001" 
     class="video-js" controls></video>
-    
   <br />
  
   <div id="textTarget"></div>
@@ -47,14 +46,7 @@
     videojs("myPlayerID").ready(function () {
       var myPlayer = this,
         dynamicHTML;
-        
-        
-        
-        
-      videoIDfromURL = getQueryString('video');  
-      myPlayer.catalog.getVideo(videoIDfromURL, function (error, video) {
-          
-          
+      myPlayer.catalog.getVideo('4414608391001', function (error, video) {
         console.log("error", error)
         myPlayer.catalog.load(video);
         console.log("mediainfo after load: ", myPlayer.mediainfo);
@@ -64,25 +56,6 @@
         myPlayer.play();
       })
     });
-      
-      /*
-    * usage: foo = getQuerystring(“bctid”, null);
-    * foo will be equal to value of query param bctid
-    * note that the default_ parameter is what you will get back
-    * if the key isn’t found
-    */
-    getQuerystring = function (key, default_) {
-        var regex, qs;
-        if (default_==null) default_="";
-        key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-        regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
-        qs = regex.exec(location.href);
-        if (qs === null) {
-            return default_;
-        } else {
-            return qs[1];
-        }
-    }
  
   </script>
 </body>

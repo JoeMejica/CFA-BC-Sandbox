@@ -108,7 +108,7 @@ CUSTOM BIG PLAY BUTTON
     width: 144px;
 }
 
-.video-js .vjs-paused .vjs-big-play-button  {
+.video-js.vjs-big-play-button.vjs-paused  {
   display: block;
 }
 

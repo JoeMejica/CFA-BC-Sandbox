@@ -108,6 +108,7 @@ CUSTOM BIG PLAY BUTTON
     width: 144px;
 }
 
+/*Play Button appears when video is paused*/
 .video-js .vjs-big-play-button .vjs-paused {
   display: block;
 }

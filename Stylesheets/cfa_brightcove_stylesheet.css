@@ -108,7 +108,9 @@ CUSTOM BIG PLAY BUTTON
     width: 144px;
 }
 
-.video-js.vjs-default-skin.vjs-paused .vjs-big-play-button {display:block !important;}
+.video-js.vjs-default-skin.vjs-paused .vjs-big-play-button {
+    display:block !important;
+}
 
 
 

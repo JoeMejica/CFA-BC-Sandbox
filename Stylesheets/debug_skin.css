@@ -45,8 +45,8 @@
     width: 144px;
 }
 
-.video-js .vjs-mouse.vjs-big-play-button .vjs-paused {
-    display: block;
+.video-js.vjs-big-play-button .vjs-paused {
+    display: block !important;
 }
 
 

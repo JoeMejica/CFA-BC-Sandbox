@@ -1,0 +1,212 @@
+/* 
+cfa_brightcove_stylesheet.css by Joe Mejica (2015 Summer IT Intern) 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+Developer Notes:
+- The customized elements outined in the CSS file (Large Play Button, Overlays, Control Bar) have been presneted to Emily Johns of CorpComm on 7/17/15 including any custom graphics used in this project. 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Purpose:
+- This CSS file customizes the default Brightcove Player design elements in order to provide the player a more "branded" look for the @Chick-fil-A Video Center. 
+- The file opens up the understanding of how to manipulate the Brightcove player via CSS plugins allowing future development possible 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+Instructions to use file in Brightcove:
+ 
+STEP 1) Locate Player ID in Brightcove Player Module under player you want to use this file for and COPY PLAYER ID. See "Brightcove Video Cloud Breakdown" documentation for help. 
+
+STEP 2) Change Player ID value under "Main Play Button Properties" to the Player ID of the player that you need to customize. 
+
+STEP 3) Save CSS file to server or repository after replacing Player ID
+
+STEP 4) Copy file URL, if using GitHub make sure you copy the URL to the RAW version of the file 
+
+STEP 5) Paste URL into the CSS Plugins field in the Players Module of the player you want to customize. See "Brightcove Video Cloud Breakdown" documentation for help.
+
+STEP 6) Click "Save"
+
+STEP 7) Preview changes in the Preview Player in the Players Module and see if stylesheet has been applied. Make changes to CSS if necessary, save CSS file, push file (if necssary), refresh player to see changes 
+
+STEP 8) Click "Publish"
+
+DONE!!!!
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Creating and Editing the CSS File
+- All of the current declarations, properies, and values can be changed to suit your personal preference as long as it follows all Visual Identity System and Corporate Communication Guidelines
+- Utilize Chrome Developer Tools to preview possible CSS changes before making changes to the actual CSS file. Please refer to "Editing & Creating CSS Files for Brightcove" documention for more info
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+/*
+/////////////////////////////
+CUSTOM BIG PLAY BUTTON 
+/////////////////////////////
+*/
+
+
+
+/*Main Play Button Properties*/
+
+/* REPLACE PLAYER ID to apply button enhancemnt to player ONLY IF TRYING TO USE FILE FOR A DIFFERENT PLAYER
+
+    Example--> .bc-player-XXXXXXXXXXXXXXXXXXXXXXXX_default.vjs-mouse
+
+                1) Replace Xs with Player ID found in Brightcove
+                2) Save CSS file and get file URL to use in Brightcove
+                
+*/
+
+.bc-player-770f3c51-ae88-4750-b15c-13bb332df92e_default.vjs-mouse .vjs-big-play-button {
+    background-color: RGB(198,12,48); /* Chick-fil-A Red */
+    width: 110px !important;
+    height: 70px !important;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    position: absolute;
+    
+    /* Square Icon Used */
+    /*Original Image Background Removed in order to blend colors well */
+    background-image: url("https://raw.githubusercontent.com/JoeMejica/CFA-BC-Sandbox/master/Graphics/cfa_chicken_head.png");   
+    background-repeat: no-repeat;
+    opacity: .6;
+    background-size: 75px;
+    background-position-x: 41px;
+    background-position-y: 0px;
+    border: .3em solid #fff;
+}
+
+
+/*Play Icon Inside Button Properties*/
+.video-js .vjs-big-play-button:before {
+    content: '\e001';
+    color: rgba(0, 0, 0, 0.64);
+    display: block;
+    font-family: VideoJS;
+    font-size: 40px;
+    margin: 25px;
+    opacity: 1;
+    text-indent: 16px;
+}
+
+/*Play Button Border Properties*/
+.video-js .vjs-big-play-button {
+    border-radius: 80px;
+    cursor: pointer;
+    height: 96px;
+    left: 23px;
+    position: absolute;
+    top: 21px;
+    width: 144px;
+}
+
+/*Big Play Button to appear on PAUSE */
+.video-js.vjs-default-skin.vjs-paused .vjs-big-play-button {
+    display:block !important;
+}
+
+/*
+/////////////////////////////
+CONTROL BAR
+/////////////////////////////
+*/
+
+.video-js .vjs-control-bar {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    transition: transform 0.5s, margin 0.5s;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: .8;
+}
+
+
+/*
+///////////////////////////////////////////////////////////////////
+IMAGE OVERLAYS FOR JSON PLUGIN (see "Plug-in Guide" for more info)
+///////////////////////////////////////////////////////////////////
+*/
+
+/* CSS Overlay Code provdided by Brightcove. Values can be changed to suit preferrence. */
+
+.vjs-overlay,
+.vjs-overlay.vjs-overlay-top-left {
+  position: absolute;
+  width: 10%;
+  background-color: #646464; /* IE8 fallback */
+  background-color: rgba(255, 255, 255, 0);
+  min-width: 40px;
+  max-width: 80px;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  top: 5px;
+  left: 5px;
+  text-align: center;
+    
+}
+
+/* overlay alignment styles */
+.vjs-overlay.vjs-overlay-top {
+  margin-left: -16.5%;
+  left: 50%;
+}
+.vjs-overlay.vjs-overlay-top-right {
+  left: auto;
+  right: 5px;
+}
+.vjs-overlay.vjs-overlay-left {
+  top: 50%;
+  margin-top: -15px;
+}
+.vjs-overlay.vjs-overlay-right {
+  left: auto;
+  right: 5px;
+  top: 50%;
+  margin-top: -15px;
+}
+.vjs-overlay.vjs-overlay-bottom {
+  margin-left: -16.5%;
+  left: 50%;
+  top: auto;
+  bottom: 4.5em;
+}
+.vjs-overlay.vjs-overlay-bottom-left {
+  bottom: 4.5em;
+  top: auto;
+  left: 5px;
+}
+.vjs-overlay.vjs-overlay-bottom-right {
+  bottom: -.5em;
+  top: auto;
+  left: auto;
+  right: 5px;
+    
+}
+
+/*Chick-fil-A "Chicken Head" overlay CSS*/
+
+.cfaimage {
+    opacity: .7;
+}

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>New LMC Player (GitHub Files) </title>
+  <title>Production Player</title>
   <style type="text/css">
     .video-js {
       width: 640px;
@@ -18,19 +18,18 @@
     
   <video id="myPlayerID"
     data-account="1397315819001"
-    data-player="b583a031-4d38-4f60-aca9-846182ff93b7"
+    data-player="770f3c51-ae88-4750-b15c-13bb332df92e"
     data-embed="default"
     class="video-js" controls></video>
 
   <div id="videoDesc" style="width:640px;font-size:17px;"></div>
 
-  <script src="//players.brightcove.net/1397315819001/b583a031-4d38-4f60-aca9-846182ff93b7_default/index.min.js"></script>
+  <script src="//players.brightcove.net/1397315819001/770f3c51-ae88-4750-b15c-13bb332df92e_default/index.min.js"></script>
 
   <script type="text/javascript">
     videojs("myPlayerID").ready(function () {
       var myPlayer = this,
         dynamicHTML,
-          
         videoIDfromURL = getParameterByName('video');
       myPlayer.catalog.getVideo(videoIDfromURL, function (error, video) {
         console.log("error", error)
@@ -54,7 +53,7 @@
     * note that the default_ parameter is what you will get back
     * if the key isn’t found
     */
-function getParameterByName(name) {
+   function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
